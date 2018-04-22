@@ -1,5 +1,5 @@
 {
-    "name": "GlobalToken",
+    "name": "GlobalToken_Nist5",
     "symbol": "GLT",
     "algorithm": "nist5",
     "peerMagic": "c708d32d",

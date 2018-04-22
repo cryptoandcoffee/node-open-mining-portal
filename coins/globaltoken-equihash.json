@@ -1,5 +1,5 @@
 {
-    "name": "GlobalToken",
+    "name": "GlobalToken_Equihash",
     "symbol": "GLT",
     "algorithm": "equihash",
     "peerMagic": "c708d32d",

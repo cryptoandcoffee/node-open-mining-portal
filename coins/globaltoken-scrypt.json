@@ -1,5 +1,5 @@
 {
-    "name": "GlobalToken",
+    "name": "GlobalToken_Scrypt",
     "symbol": "GLT",
     "algorithm": "scrypt",
     "peerMagic": "c708d32d",

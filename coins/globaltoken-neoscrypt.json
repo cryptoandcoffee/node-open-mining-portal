@@ -1,5 +1,5 @@
 {
-    "name": "GlobalToken",
+    "name": "GlobalToken_Neoscrypt",
     "symbol": "GLT",
     "algorithm": "neoscrypt",
     "peerMagic": "c708d32d",

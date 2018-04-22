@@ -1,5 +1,5 @@
 {
-    "name": "GlobalToken",
+    "name": "GlobalToken_SHA256(d)",
     "symbol": "GLT",
     "algorithm": "sha256",
     "peerMagic": "c708d32d",
