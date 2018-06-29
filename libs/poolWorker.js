@@ -178,9 +178,9 @@ module.exports = function(logger){
         
         var pool;
         if(poolOptions.coin.algorithm === "equihash")
-            pool = EquihashStratum.createPool(poolOptions, authorizeFN, logger);
+            pool = EquihashStratum.createPool(poolOptions, authorizeFN, false, logger);
         else
-            pool = Stratum.createPool(poolOptions, authorizeFN, logger);
+            pool = Stratum.createPool(poolOptions, authorizeFN, false, logger);
         
         pool.on('share', function(isValidShare, isValidBlock, data){
 
