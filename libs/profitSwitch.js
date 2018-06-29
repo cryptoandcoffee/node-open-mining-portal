@@ -9,6 +9,7 @@ var Poloniex = require('./apiPoloniex.js');
 var Mintpal  = require('./apiMintpal.js');
 var Bittrex  = require('./apiBittrex.js');
 var Stratum  = require('stratum-pool');
+var EquihashStratum  = require('equihash-stratum-pool');
 
 module.exports = function(logger){
 
@@ -537,10 +538,21 @@ module.exports = function(logger){
         });
     };
     this.getDaemonInfoForCoin = function(symbol, cfg, callback){
-        var daemon = new Stratum.daemon.interface([cfg], function(severity, message){
-            logger[severity](logSystem, symbol, message);
-            callback(null); // fail gracefully for each coin
-        });
+        var daemon;
+        if(poolConfig.coin.algorithm === "equihash")
+        {
+             daemon = new EquihashStratum.daemon.interface([cfg], function(severity, message){
+                logger[severity](logSystem, symbol, message);
+                callback(null); // fail gracefully for each coin
+            });
+        }
+        else
+        {
+            daemon = new Stratum.daemon.interface([cfg], function(severity, message){
+                logger[severity](logSystem, symbol, message);
+                callback(null); // fail gracefully for each coin
+            });
+        }
 
         daemon.cmd('getblocktemplate', [{"capabilities": [ "coinbasetxn", "workid", "coinbase/append" ]}], function(result) {
             if (result[0].error != null) {

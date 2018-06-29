@@ -1,4 +1,5 @@
 var Stratum = require('stratum-pool');
+var EquihashStratum = require('equihash-stratum-pool');
 var redis   = require('redis');
 var net     = require('net');
 
@@ -174,8 +175,13 @@ module.exports = function(logger){
             });
         };
 
-
-        var pool = Stratum.createPool(poolOptions, authorizeFN, logger);
+        
+        var pool;
+        if(poolOptions.coin.algorithm === "equihash")
+            pool = EquihashStratum.createPool(poolOptions, authorizeFN, logger);
+        else
+            pool = Stratum.createPool(poolOptions, authorizeFN, logger);
+        
         pool.on('share', function(isValidShare, isValidBlock, data){
 
             var shareData = JSON.stringify(data);
