@@ -1,0 +1,10 @@
+{
+    "name": "GLT-TimeTravel10",
+    "symbol": "GLT",
+    "algorithm": "timetravel10",
+    "blockHashSHA256": true,
+    "peerMagic": "c708d32d",
+    "peerMagicTestnet": "3a6f375b"
+}
+
+

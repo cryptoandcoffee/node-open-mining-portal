@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_Nist5",
+    "name": "GLT-Xevan",
     "symbol": "GLT",
-    "algorithm": "nist5",
+    "algorithm": "xevan",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

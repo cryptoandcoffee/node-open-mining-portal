@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_HMQ1725",
+    "name": "GLT-X15",
     "symbol": "GLT",
-    "algorithm": "hmq1725",
+    "algorithm": "x15",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

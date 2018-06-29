@@ -1,0 +1,10 @@
+{
+    "name": "GLT-Nist5",
+    "symbol": "GLT",
+    "algorithm": "nist5",
+    "blockHashSHA256": true,
+    "peerMagic": "c708d32d",
+    "peerMagicTestnet": "3a6f375b"
+}
+
+

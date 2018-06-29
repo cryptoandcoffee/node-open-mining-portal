@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_X11",
+    "name": "GLT-Quark",
     "symbol": "GLT",
-    "algorithm": "x11",
+    "algorithm": "quark",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

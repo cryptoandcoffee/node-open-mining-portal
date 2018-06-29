@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_Yescrypt",
+    "name": "GLT-HMQ1725",
     "symbol": "GLT",
-    "algorithm": "yescrypt",
+    "algorithm": "hmq1725",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

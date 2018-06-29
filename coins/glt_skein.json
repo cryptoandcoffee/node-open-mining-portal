@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_Scrypt",
+    "name": "GLT-Skein",
     "symbol": "GLT",
-    "algorithm": "scrypt",
+    "algorithm": "skein",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

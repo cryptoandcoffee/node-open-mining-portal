@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_Xevan",
+    "name": "GLT-X17",
     "symbol": "GLT",
-    "algorithm": "xevan",
+    "algorithm": "x17",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_SHA256(d)",
+    "name": "GLT-X16R",
     "symbol": "GLT",
-    "algorithm": "sha256",
+    "algorithm": "x16r",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+

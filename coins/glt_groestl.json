@@ -1,0 +1,10 @@
+{
+    "name": "GLT-Groestl",
+    "symbol": "GLT",
+    "algorithm": "groestlmyriad",
+    "blockHashSHA256": true,
+    "peerMagic": "c708d32d",
+    "peerMagicTestnet": "3a6f375b"
+}
+
+

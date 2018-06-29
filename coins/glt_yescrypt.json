@@ -1,7 +1,10 @@
 {
-    "name": "GlobalToken_Neoscrypt",
+    "name": "GLT-Yescrypt",
     "symbol": "GLT",
-    "algorithm": "neoscrypt",
+    "algorithm": "yescrypt",
+    "blockHashSHA256": true,
     "peerMagic": "c708d32d",
     "peerMagicTestnet": "3a6f375b"
 }
+
+
