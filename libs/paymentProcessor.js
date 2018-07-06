@@ -4,7 +4,6 @@ var redis = require('redis');
 var async = require('async');
 
 var Stratum = require('stratum-pool');
-var EquihashStratum = require('equihash-stratum-pool');
 var util = require('stratum-pool/lib/util.js');
 
 
@@ -51,21 +50,10 @@ function SetupForPool(logger, poolOptions, setupFinished){
 
     var logSystem = 'Payments';
     var logComponent = coin;
-    var daemon;
 
-    if(poolOptions.coin.algorithm === "equihash")
-    {
-        daemon = new EquihashStratum.daemon.interface([processingConfig.daemon], function(severity, message){
-            logger[severity](logSystem, logComponent, message);
-        });
-    }
-    else
-    {
-        daemon = new Stratum.daemon.interface([processingConfig.daemon], function(severity, message){
-            logger[severity](logSystem, logComponent, message);
-        });
-    }
-     
+    var daemon = new Stratum.daemon.interface([processingConfig.daemon], function(severity, message){
+        logger[severity](logSystem, logComponent, message);
+    });
     var redisClient = redis.createClient(poolOptions.redis.port, poolOptions.redis.host);
 
     var magnitude;

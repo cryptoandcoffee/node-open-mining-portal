@@ -12,7 +12,6 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 
 var Stratum = require('stratum-pool');
-var EquihashStratum = require('equihash-stratum-pool');
 var util = require('stratum-pool/lib/util.js');
 
 var api = require('./api.js');
@@ -158,19 +157,9 @@ module.exports = function(logger){
                                 }
                         }
                     })();
-                    var daemon;
-                    if(poolConfigs.coin.algorithm === "equihash")
-                    {
-                        daemon = new EquihashStratum.daemon.interface([coinInfo.daemon], function(severity, message){
-                            logger[severity](logSystem, c, message);
-                        });  
-                    }
-                    else
-                    {
-                       daemon = new Stratum.daemon.interface([coinInfo.daemon], function(severity, message){
-                            logger[severity](logSystem, c, message);
-                        });    
-                    }
+                    var daemon = new Stratum.daemon.interface([coinInfo.daemon], function(severity, message){
+                        logger[severity](logSystem, c, message);
+                    });
                     daemon.cmd('dumpprivkey', [coinInfo.address], function(result){
                         if (result[0].error){
                             logger.error(logSystem, c, 'Could not dumpprivkey for ' + c + ' ' + JSON.stringify(result[0].error));

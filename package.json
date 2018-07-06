@@ -32,7 +32,6 @@
     },
     "dependencies": {
         "stratum-pool": "git://github.com/globaltoken/node-stratum-pool.git",
-        "equihash-stratum-pool": "git://github.com/globaltoken/node-stratum-pool.git#equihash",
         "dateformat": "1.0.12",
         "node-json-minify": "*",
         "redis": "0.12.1",
