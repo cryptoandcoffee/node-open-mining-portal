@@ -1,0 +1,10 @@
+{
+    "name": "GLT-Padihash",
+    "symbol": "GLT",
+    "algorithm": "padihash",
+    "blockHashSHA256": true,
+    "peerMagic": "c708d32d",
+    "peerMagicTestnet": "3a6f375b"
+}
+
+
